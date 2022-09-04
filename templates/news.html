@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg bg-light fs-3 fw-bold">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Почетна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'themes' %}">Теми</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'news' %}">Новости</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-danger" href="{% url 'logout' %}">Одјава</a>
+            </form>
+        </div>
+    </div>
+</nav>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="http://www.mzsv.gov.mk/CMS/Upload/images/LOGO%20MZSV%201.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block ">
+                <h1>Исплатени 2,2 милиона евра земјоделски субвенции на ден 15.08.2022</h1>
+                <h3>Вкупно 2,2 милиона евра субвенции за поддршка на земјоделството исплати денеска Министерството за
+                    финансии. Парите се веќе легнати на сметка на земјоделците.</h3>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+            <img src="https://www.brif.mk/wp-content/uploads/2016/07/afprz-610x330.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>ЈАВЕН ПОВИК бр.10/2022 - 27.08.2022</h1>
+                <h3>за доставување на барања за користење на средства од Програмата за
+                    финансиска поддршка на руралниот развој за 2022 година</h3>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+            <img src="https://novamakedonija.com.mk/wp-content/uploads/2022/06/00-naslovna-10-rosoman-pazar-2022-janevska-ilieva-14.jpg"
+                 class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-light bg-dark">
+                <h1>Ќе се облажи ли некој летово, со кајсии…</h1>
+                <h3>Овошјето што со својот вкус и мирис досега неизоставно го дополнуваше уживањето во долгите летни
+                    денови и кое, според легендата, ја крие тајната на здравјето и на долговечноста на македонските
+                    далечни роднини, Хунзи, а притоа важи и за една од најпогодните култури за одгледување во
+                    Македонија, на зелените пазари и во маркетите во Скопје, минатиот викенд се продаваше за 150 денари
+                    по килограм. Некој можеби ќе рече дека во период на вртоглав раст на цените на основните животни
+                    намирници, тоа и не е некоја новост за споделување, но, сепак, тешко е да се одбегне споредбата со
+                    состојбата од пред само неколку години, кога килограм кајсии, во овој период од годината, можеше да
+                    се купи за по 50 или 60 денари, колку што сега треба да се плати за килограм банани, кои се
+                    одгледуваат дури од далечната Јужна Америка.</h3>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</body>
+</html>
